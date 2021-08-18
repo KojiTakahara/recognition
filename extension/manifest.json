@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "card-recognition",
+	"version": "1.0",
+	"content_scripts": [{
+		"matches": ["https://*/*"],
+		"js": ["content.js"]
+	}],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"permissions": [
+		"activeTab",
+		"contextMenus",
+		"tabs",
+		"http://*/"
+	]
+}
